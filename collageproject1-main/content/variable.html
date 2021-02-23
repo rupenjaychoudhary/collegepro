@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav_logo">
+                <img src="/assest/logo.png" alt="" class="nav_logo_img">
+            </div>
+            <div class="nav_container">
+                <ul>
+                        <a href="/">
+                            <li>Home</li>
+                        </a>
+                        <a href="/page/about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="/page/contect.html">
+                            <li>Contact</li>
+                        </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="main_content">
+            <!-- content -->
+           <h1>VARIABLE IN C</h1>
+           <P>A variable is nothing but a name given to a storage area that our programs can manipulate. Each variable in C has a specific type, which determines the size and layout of the variable's memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.</P>
+           <table class="table table-bordered">
+            <tr>
+            <th>Sr.No.</th>
+            <th style="text-align:center;">Type &amp; Description</th>
+            </tr>
+            <tr>
+            <td class="ts">1</td>
+            <td><p><b>char</b></p>
+            <p>Typically a single octet(one byte). It is an integer type.</p></td>
+            </tr>
+            <tr>
+            <td class="ts">2</td>
+            <td><p><b>int</b></p>
+            <p>The most natural size of integer for the machine.</p></td>
+            </tr>
+            <tr>
+            <td class="ts">3</td>
+            <td><p><b>float</b></p>
+            <p>A single-precision floating point value.</p></td>
+            </tr>
+            <tr>
+            <td class="ts">4</td>
+            <td><p><b>double</b></p>
+            <p>A double-precision floating point value.</p></td>
+            </tr>
+            <tr>
+            <td class="ts">5</td>
+            <td><p><b>void</b></p>
+            <p>Represents the absence of type.</p></td>
+            </tr>
+            </table><br>
+            <p>C programming language also allows to define various other types of variables, which we will cover in subsequent chapters like Enumeration, Pointer, Array, Structure, Union, etc. For this chapter, let us study only basic variable types</p><br>
+            <h3>Defintion of variable in c </h3><br>
+            <p>A variable definition tells the compiler where and how much storage to create for the variable. A variable definition specifies a data type and contains a list of one or more variables of that type as follows −</p><br>
+            <div class="code">type variable_list;</div><br>
+            <p>
+                Here, type must be a valid C data type including char, w_char, int, float, double, bool, or any user-defined object; and variable_list may consist of one or more identifier names separated by commas. Some valid declarations are shown here −
+            </p>
+            <div class="code">int    i, j, k;<br>
+                char   c, ch;<br>
+                float  f, salary;<br>
+                double d;<br>
+            </div>
+            <p>The line int i, j, k; declares and defines the variables i, j, and k; which instruct the compiler to create variables named i, j and k of type int.<br>
+
+                Variables can be initialized (assigned an initial value) in their declaration. The initializer consists of an equal sign followed by a constant expression as follows −</p>
+                <div class="code">type variable_name = value;</div>
+                <h4>Some example are-</h4>
+                <div class="code">extern int d = 3, f = 5;    // declaration of d and f.<br>
+                    int d = 3, f = 5;           // definition and initializing d and f.<br>
+                    byte z = 22;                // definition and initializes z.<br>
+                    char x = 'x';               // the variable x has the value 'x'.<br>
+                </div><br>
+                <P>
+                    For definition without an initializer: variables with static storage duration are implicitly initialized with NULL (all bytes have the value 0); the initial value of all other variables are undefined.
+                </P>
+                <h3>Variable declaration in c</h3>
+                <p>A variable declaration provides assurance to the compiler that there exists a variable with the given type and name so that the compiler can proceed for further compilation without requiring the complete detail about the variable. A variable definition has its meaning at the time of compilation only, the compiler needs actual variable definition at the time of linking the program.<br>
+                    A variable declaration is useful when you are using multiple files and you define your variable in one of the files which will be available at the time of linking of the program. You will use the keyword extern to declare a variable at any place. Though you can declare a variable multiple times in your C program, it can be defined only once in a file, a function, or a block of code.</p>
+                <h3>Example of a variable declaration</h3>
+                <p>Try the following example, where variables have been declared at the top, but they have been defined and initialized inside the main function −</p><br>
+                <div class="code"><p>#include< stdio.h></p>
+                    <p>// Variable declaration:<br>
+                    extern int a, b;<br>
+                    extern int c;<br>
+                    extern float f;</p><br>
+                    <p>int main ()<br> {</p>
+                    <p>   //* variable definition: *//<br><br>
+                       int a, b;<br>
+                       int c;<br>
+                       float f;</p><br>
+                    <p>   //* actual initialization *//<br>
+                       a = 10;<br>
+                       b = 20;</p><br>
+                    <p>   c = a + b;<br>
+                       printf(&quot;value of c : %d \n&quot;, c);</p><br>
+                    <p>   f = 70.0/3.0;<br>
+                       printf(&quot;value of f : %f \n&quot;, f);</p><br>
+                    <p>   return 0;<br>
+                    }</p>
+                    </div>
+                    <p>When the above code is compiled and executed, it produces the following result −</p><br>
+                    <div class="code">value of c : 30<br>
+                        value of f : 23.333334</div>
+           <!-- content -->
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div class="detail">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore ea et ad aliquid repellendus
+                    consectetur minima voluptatem praesentium autem eaque?</p>
+            </div>
+            <div class="links">
+                <div class="quick_links">
+                    <ul>
+                        <a href="/">
+                            <li>Home</li>
+                        </a>
+                        <a href="/page/about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="/page/contect.html">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li class="social_link"><i class="fab fa-facebook-f"></i></li>
+                        <li class="social_link"><i class="fab fa-github"></i></li>
+                        <li class="social_link"><i class="fab fa-instagram"></i></li>
+                        <li class="social_link"><i class="fab fa-linkedin"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/5708ed03ed.js" crossorigin="anonymous"></script>
+</body>
+</html>

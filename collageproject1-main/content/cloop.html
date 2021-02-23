@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav_logo">
+                <img src="/assest/logo.png" alt="" class="nav_logo_img">
+            </div>
+            <div class="nav_container">
+                <ul>
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="/page/about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="/page/contect.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="main_content">
+            <!-- content -->
+            <h1>C Loop</h1>
+            <p>The looping can be defined as repeating the same process multiple times until a specific condition
+                satisfies. There are three types of loops used in the C language. In this part of the tutorial, we are
+                going to learn all the aspects of C loops.</p><br>
+            <h2>Why use loops in C language?</h2>
+            <p>The looping simplifies the complex problems into the easy ones. It enables us to alter the flow of the
+                program so that instead of writing the same code again and again, we can repeat the same code for a
+                finite number of times. For example, if we need to print the first 10 natural numbers then, instead of
+                using the printf statement 10 times, we can print inside a loop which runs up to 10 iterations</p><br>
+            <h2>Advantage of loops in C</h2>
+            <ul>1) It provides code reusability.<br>
+
+                2) Using loops, we do not need to write the same code again and again.<br>
+
+                3) Using loops, we can traverse over the elements of data structures (array or linked lists).</ul><br>
+            <h2>type of c loop</h2>
+            <ul>C programming has three types of loops:<br>
+
+                for loop<br>
+                while loop<br>
+                do...while loop<br>
+            </ul>
+            <h2>for loop</h2>
+            <p>The for loop is used in the case where we need to execute some part of the code until the given condition
+                is satisfied. The for loop is also called as a per-tested loop. It is better to use for loop if the
+                number of iteration is known in advance.</p>
+            <h2>The syntax of for loop in c language is given below:</h2><br>
+            <div class="code">
+                <p>
+                    for (initializationStatement; testExpression; updateStatement)<br>
+                    {<br>
+                    // statements inside the body of loop<br>
+                    }</p><br>
+            </div>
+            <h2>EXAMPLE OF FOR LOOP</h2>
+            <div class="code">
+                <p>
+                    // Print numbers from 1 to 10</p><br>
+                <p>#include< stdio.h>
+                </p><br>
+                <p>int main()<br>
+                    {<br>
+                    int i;</p><br>
+                <p> for (i = 1; i &lt; 11; ++i)<br>
+                    {<br>
+                    printf(&quot;%d &quot;, i);<br>
+                    }<br>
+                    return 0;<br>
+                    }
+                </p>
+            </div>
+            <H2>OUTPUT</H2>
+            <div class="code">
+                <p>1 2 3 4 5 6 7 8 9 10</p>
+            </div>
+            <img src="/assest/c-for-loop.jpg" alt="c loop "><br>
+            <h1>do-while loop in C</h1>
+            <p>The do-while loop continues until a given condition satisfies. It is also called post tested loop. It is
+                used when it is necessary to execute the loop at least once (mostly menu driven programs).</p>
+            <h2>The syntax of do while loop in c language is given below:</h2>
+            <div class="code">
+                <p>
+                    do<br>
+                    {<br>
+                    // statements inside the body of the loop<br>
+                    }<br>
+                    while (testExpression);<br>
+                </p>
+            </div>
+            <div class="code">
+                <pre class="exec" style="max-height: 600px;"><code class="c hljs cpp"><span class="hljs-comment">// Program to add numbers until the user enters zero</span>
+
+                        <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+                        <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+                        </span>{
+                            <span class="hljs-keyword">double</span> number, sum = <span class="hljs-number">0</span>;
+                        
+                            <span class="hljs-comment">// the body of the loop is executed at least once</span>
+                            <span class="hljs-keyword">do</span>
+                            {
+                                <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Enter a number: "</span>);
+                                <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%lf"</span>, &amp;number);
+                                sum += number;
+                            }
+                            <span class="hljs-keyword">while</span>(number != <span class="hljs-number">0.0</span>);
+                        
+                            <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Sum = %.2lf"</span>,sum);
+                        
+                            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+                        }</code></pre>
+            </div><br>
+            <h2>OUTPUT</h2>
+            <div class="code">
+                <p>Enter a number: 1.5,<br>
+                    Enter a number: 2.4<br>
+                    Enter a number: -3.4<br>
+                    Enter a number: 4.2<br>
+                    Enter a number: 0<br>
+                    Sum = 4.70<br>
+                </p>
+            </div>
+            <img src="/assest/c-do-while-loop_0.jpg" alt="do while loop">
+            <h2>while loop in C</h2>
+            <p>The while loop in c is to be used in the scenario where we don't know the number of iterations in
+                advance. The block of statements is executed in the while loop until the condition specified in the
+                while loop is satisfied. It is also called a pre-tested loop.</p><br>
+            <h3>The syntax of while loop in c language is given below:</h3><br>
+            <div class="code">
+                <p>while(condition)
+                    <br>
+                    {<br>
+                    //code to be executed<br>
+                    } <br>
+                </p>
+            </div>
+            <h2>EXAMPLE OF WHILE LOOP IN C PROGRAMMING</h2>
+            <div class="code">
+                <pre class="exec" style="max-height: 600px;"><code class="c hljs cpp"><span class="hljs-comment">// Print numbers from 1 to 5</span>
+
+                        <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+                        <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+                        </span>{
+                            <span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>;
+                            
+                            <span class="hljs-keyword">while</span> (i &lt;= <span class="hljs-number">5</span>)
+                            {
+                                <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d\n"</span>, i);
+                                ++i;
+                            }
+                        
+                            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+                        }</code></pre>
+            </div>
+            <h2>OUTPUT</h2>
+            <div class="code">1<br>
+                2<br>
+                3<br>
+                4<br>
+                5<br>
+            </div>
+            <img src="/assest/c-while-loop_0.jpg" alt="while loop in c programming">
+
+            <!-- content -->
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div class="detail">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore ea et ad aliquid repellendus
+                    consectetur minima voluptatem praesentium autem eaque?</p>
+            </div>
+            <div class="links">
+                <div class="quick_links">
+                    <ul>
+                        <a href="/">
+                            <li>Home</li>
+                        </a>
+                        <a href="/page/about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="/page/contect.html">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li class="social_link"><i class="fab fa-facebook-f"></i></li>
+                        <li class="social_link"><i class="fab fa-github"></i></li>
+                        <li class="social_link"><i class="fab fa-instagram"></i></li>
+                        <li class="social_link"><i class="fab fa-linkedin"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/5708ed03ed.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
