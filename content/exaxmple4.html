@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav_logo">
+                <img src="/assest/logo.png" alt="" class="nav_logo_img">
+            </div>
+            <div class="nav_container">
+                <ul>
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="/page/about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="/page/contect.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="main_content">
+            <!-- content -->
+            <p>Write a program of round robin CPU scheduling in C language.</p>
+            <div class="code">
+                <p>#include<stdio.h>
+                </p>
+                <p>#include<conio.h>
+                </p>
+                <p>void main()<br>{<br> // initlialize the variable name<br> int i, NOP, sum=0,count=0, y, quant, wt=0,
+                    tat=0, at[10], bt[10], temp[10];<br> float avg_wt, avg_tat;<br> printf(&quot; Total number of
+                    process in the system: &quot;);<br> scanf(&quot;%d&quot;, &amp;NOP);<br> y = NOP; // Assign the
+                    number of process to variable y </p>
+                <p>// Use for loop to enter the details of the process like Arrival time and the Burst Time<br>for(i=0;
+                    i<NOP; i++) { printf("\n Enter the Arrival and Burst time of the Process[%d]\n", i+1); printf("
+                        Arrival time is: \t"); // Accept arrival time scanf("%d", &at[i]); printf(" \nBurst time is:
+                        \t"); // Accept the Burst time scanf("%d", &bt[i]); temp[i]=bt[i]; // store the burst time in
+                        temp array } // Accept the Time qunat printf("Enter the Time Quantum for the process: \t");
+                        scanf("%d", &quant); // Display the process No, burst time, Turn Around Time and the waiting
+                        time printf("\n Process No \t\t Burst Time \t\t TAT \t\t Waiting Time ");  
+    for(sum=0, i = 0; y!=0; )  
+    {  
+    if(temp[i] <= quant && temp[i] > 0) // define the conditions<br>{<br>    sum = sum + temp[i];<br>    temp[i] = 0;<br>    count=1;<br>    }<br>    else if(temp[i] &gt; 0)<br>    {<br>        temp[i] = temp[i] - quant;<br>        sum = sum + quant;<br>    }<br>    if(temp[i]==0 &amp;&amp; count==1)<br>    {<br>        y--; //decrement the process no.<br>        printf(&quot;\nProcess No[%d] \t\t %d\t\t\t\t %d\t\t\t %d&quot;, i+1, bt[i], sum-at[i], sum-at[i]-bt[i]);<br>        wt = wt+sum-at[i]-bt[i];<br>        tat = tat+sum-at[i];<br>        count =0;<br>    }<br>    if(i==NOP-1)<br>    {<br>        i=0;<br>    }<br>    else if(at[i+1]&lt;=sum)<br>    {<br>        i++;<br>    }<br>    else<br>    {<br>        i=0;<br>    }<br>}<br>// represents the average waiting time and Turn Around time<br>avg_wt = wt <em> 1.0/NOP;<br>avg_tat = tat </em> 1.0/NOP;<br>printf(&quot;\n Average Turn Around Time: \t%f&quot;, avg_wt);<br>printf(&quot;\n Average Waiting Time: \t%f&quot;, avg_tat);<br>getch();<br>}  </p>
+    </div>
+    <h2>output</h2>
+    <img src="/assest/round-robin-program-in-c3.jpg" alt="">
+            <!-- content -->
+        </div>
+    </main>
+    <footer>
+        <div class=" footer_container">
+                        <div class="detail">
+                            
+                        </div>
+                        <div class="links">
+                            <div class="quick_links">
+                                <ul>
+                                    <a href="/">
+                                        <li>Home</li>
+                                    </a>
+                                    <a href="/page/about.html">
+                                        <li>About</li>
+                                    </a>
+                                    <a href="/page/contect.html">
+                                        <li>Contact</li>
+                                    </a>
+                                    <a href="/content/example3.html" class="previous">&laquo; Previous</a>
+                                    <a href="/content/example5.html" class="next">Next &raquo;</a>
+                                </ul>
+                            </div>
+                            <div class="social">
+                                <ul>
+                                    <li class="social_link"><i class="fab fa-facebook-f"></i></li>
+                                    <li class="social_link"><i class="fab fa-github"></i></li>
+                                    <li class="social_link"><i class="fab fa-instagram"></i></li>
+                                    <li class="social_link"><i class="fab fa-linkedin"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+            </div>
+            </footer>
+            <script src="https://kit.fontawesome.com/5708ed03ed.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

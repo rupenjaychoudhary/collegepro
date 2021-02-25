@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav_logo">
+                <img src="/assest/logo.png" alt="" class="nav_logo_img">
+            </div>
+            <div class="nav_container">
+                <ul>
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="/page/about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="/page/contect.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="main_content">
+            <!-- content -->
+            <h1>Nested loop in c</h1>
+            <P>
+                C supports nesting of loops in C. Nesting of loops is the feature in C that allows the looping of
+                statements inside another loop. Let's observe an example of nesting loops in C.
+
+                Any number of loops can be defined inside another loop, i.e., there is no restriction for defining any
+                number of loops. The nesting level can be defined at n times. You can define any type of loop inside
+                another loop; for example, you can define 'while' loop inside a 'for' loop.
+            </P>
+            <div class="code">
+                <p>Outer_loop<br>
+                    {<br>
+                    Inner_loop<br>
+                    {<br>
+                    // inner loop statements.<br>
+                    }<br>
+                    // outer loop statements.<br>}
+                </p>
+            </div><br>
+            <p>Outer_loop and Inner_loop are the valid loops that can be a 'for' loop, 'while' loop or 'do-while' loop.
+            </p><br>
+            <h2>Nested for loop</h2>
+            <p>The syntax for a nested for loop statement in C is as follows −</p>
+            <div class="code">
+                <p>for ( init; condition; increment )<br>
+                    {<br></p>
+                <p> for ( init; condition; increment ) <br>
+                    {<br>
+                    statement(s);<br>
+                    }<br>
+                    statement(s);<br>
+                    }<br></p>
+            </div>
+            <div class="code">
+                <p>// C program that uses nested for loop</p> <br>
+                <p>// to print a 2D matrix </p><br>
+
+                <p> #include < stdio.h>
+                </p><br>
+                <p> #include < stdlib.h>
+                </p><br>
+
+                <p>#define ROW 3 </p>
+                #define COL 3 </p>
+
+                <p> // Driver program </p>
+                <p> int main() </p>
+                <p> { </p>
+
+                <p> int i, j; </p>
+
+                <p> // Declare the matrix </p>
+                <p> int matrix[ROW][COL] =
+                <p> { <br>
+                <p>{ 1, 2, 3 }, </p>
+                <p> { 4, 5, 6 },</p>
+                <p> { 7, 8, 9 } <br>
+                    }; </p>
+                <p> printf("Given matrix is \n"); </p><br>
+
+                <p> // Print the matrix using nested loops </p>
+                <p> for (i = 0; i < ROW; i++)<br> { </p>
+
+                <p> for (j = 0; j < COL; j++) </p>
+                        <p> printf("%d ", matrix[i][j]);</p>
+
+                        <p> printf("\n"); </p>
+                        <p> } </p>
+
+                        return 0; </p>
+                }</p>
+            </div>
+            <img src="/assest/c-nested-for-loop.svg" alt="">
+            <h2>Nested while loop</h2>
+            <p>The nested while loop means any type of loop which is defined inside the 'while' loop.</p>
+            <div class="code">
+                <p>while(condition)<br>{<br> while(condition)<br> {<br> // inner loop statements.<br> }<br>// outer loop
+                    statements.<br>} </p>
+            </div>
+            <h2>Example of nested while loop</h2>
+            <div class="code">
+                <p>
+                    #include < stdio.h><br>
+                        int main()<br>
+                        {<br>
+                        int a = 1, b = 1;<br>
+                        while(a &lt;= 5)<br>
+                        {<br>
+                        b = 1;<br>
+                        while(b &lt;= 5)<br>
+                        {<br>
+                        printf(&quot;%d &quot;, b);<br>
+                        b++;<br>
+                        }<br>
+                        printf(&quot;\n&quot;);<br>
+                        a++;<br>
+                        }<br>
+                        return 0;<br>
+                        }<br></p>
+            </div><br>
+            <h2>OUTPUT </h2>
+            <div class="code">
+                1 2 3 4 5<br>
+                1 2 3 4 5<br>
+                1 2 3 4 5<br>
+                1 2 3 4 5<br>
+                1 2 3 4 5<br>
+            </div>
+            <img src="/assest/nested while loop in c.gif" alt="nested while loop in c">
+            <h2>Nested do..while loop</h2>
+            <p>The nested do..while loop means any type of loop which is defined inside the 'do..while' loop.</p><br>
+            <div class="code"><p>do<br>{<br>   do<br>  {<br>      // inner loop statements.<br> 
+              }while(condition);<br>// outer loop statements.<br>}while(condition);  </p>
+            </div><br>
+            <h2>Example of the nested while loop in c</h2>
+            <div class="code"><p>
+
+                #include < stdio.h><br> 
+                int main()<br>  
+                {<br>  
+                  /*printing the pattern<br> 
+                     ******** <br>
+                     ******** <br>
+                     ******** <br>
+                     ******** */  <br>
+                int i=1;  <br>
+                do <br>          // outer loop  <br>
+                {  <br>
+                    int j=1; <br> 
+                    do    <br>   // inner loop  <br>
+                   {  <br>
+                      printf("*");  <br>
+                      j++;  <br>
+                   }<br>while(j<=8);  <br>
+                    printf("\n");  <br>
+                    i++;  <br>
+                     }<br>while(i<=4);  <br>
+                }<br> </p></div>
+                <h2>output</h2>
+                <div class="code">
+                    ********<br>
+                    ********<br>
+                    ********<br>
+                    ********<br>
+                </div>
+                <img src="/assest/dowhileloop.jpg" alt="nested do while loop">
+
+            <!-- content -->
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div class="detail">
+               
+            </div>
+            <div class="links">
+                <div class="quick_links">
+                    <ul>
+                        <a href="/">
+                            <li>Home</li>
+                        </a>
+                        <a href="/page/about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="/page/contect.html">
+                            <li>Contact</li>
+                        </a>
+                        <a href="/content/cloop.html" class="previous">&laquo; Previous</a>
+                        <a href="/content/nestedinfiniteloop.html" class="next">Next &raquo;</a>
+                    </ul>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li class="social_link"><i class="fab fa-facebook-f"></i></li>
+                        <li class="social_link"><i class="fab fa-github"></i></li>
+                        <li class="social_link"><i class="fab fa-instagram"></i></li>
+                        <li class="social_link"><i class="fab fa-linkedin"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/5708ed03ed.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

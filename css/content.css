@@ -1,5 +1,5 @@
 .main_content{
-    font-size: 20px;
+    font-size: 17px;
     color: rgba(0, 0, 0, 0.651);
     width: 70%;
     margin: 0 auto ;
@@ -15,6 +15,7 @@ h1,h2,h3,h4,h5,h6{
 }
 p{
     margin-left: 10px;
+    
 }
 ul,ol{
     margin:10px 0 0 5rem;
@@ -45,17 +46,21 @@ tr:nth-child(odd){
     border-bottom: 1px solid #000;
 }
 .code{overflow: scroll;
-    background-color:indigo;
-    color: gold;
+    background-color:dimgray;
+    color:blanchedalmond;
     max-height: 1000px;
     border: 1px solid #ccc;
     padding: 0.7rem 0 5px 1rem;
 }
 img{
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height:450px;
     object-fit: contain;
 }
 table p{
     text-align: left;
 }
+
+  
+  
+ 

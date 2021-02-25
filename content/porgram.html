@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav_logo">
+                <img src="/assest/logo.png" alt="" class="nav_logo_img">
+            </div>
+            <div class="nav_container">
+                <ul>
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="/page/about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="/page/contect.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="main_content">
+            <!-- content -->
+            <div class="code"><pre style="word-wrap: break-word; white-space: pre-wrap;">## Accessing array elements(Traversing array) by incrementing a Pointer
+
+                Name of the array refers to the base address of the array.
+                
+                Below is a program to access elements of an array using pointer increment.
+                
+                ```c
+                #include &lt;stdio.h&gt;
+                
+                const int MAX = 3;  // Global declaration
+                int main()
+                {
+                    printf("\n\n\t\tC Programs\n\n\n");
+                    int var[] = {100, 200, 300};
+                    int i, *ptr;
+                
+                    /*
+                        storing address of the first element
+                        of the array in pointer variable
+                    */
+                    ptr = var;
+                
+                    for(i = 0; i &lt; MAX; i++)
+                    {
+                        printf("\n\n\nAddress of var[%d] = %x ", i, ptr);
+                        printf("\nValue of var[%d] = %d ", i, *ptr);
+                
+                       // move to the next location
+                        ptr++;
+                    }
+                    printf("\n\n\t\t\tCoding is Fun !\n\n\n");
+                    return 0;
+                }
+                ```
+                
+                ## Traversing array elements by decrementing a Pointer
+                
+                Below is a program to access elements of an array using pointer decrement.
+                
+                ```c
+                #include &lt;stdio.h&gt;
+                
+                const int MAX = 3;  // Global declaration
+                int main()
+                {
+                    printf("\n\n\t\tC Programs\n\n\n");
+                    int var[] = {100, 200, 300};
+                    int i, *ptr;
+                
+                    /*
+                        storing address of the last element
+                        of the array in pointer variable
+                    */
+                    ptr = &amp;var[MAX-1];
+                
+                    for(i = MAX; i &gt; 0; i--)
+                    {
+                        printf("\n\n\nAddress of var[%d] = %x ", i, ptr);
+                        printf("\nValue of var[%d] = %d ", i, *ptr);
+                
+                        // move to the previous location
+                        ptr--;
+                    }
+                    printf("\n\n\t\t\tCoding is Fun !\n\n\n");
+                    return 0;
+                }
+                ```
+                </pre></div>
+                <h2>example 2</h2>
+                <div class="code"><pre style="word-wrap: break-word; white-space: pre-wrap;">## Basic do while Loop Program
+
+                    Every loop consists of three parts in sequence:
+                    
+                    Do while loop is used when the actual code must be executed atleast once. For example: Incase of menu driven functions.
+                    
+                    Below is a simple program on do while loop.
+                    
+                    ```c
+                    #include&lt;stdio.h&gt;
+                    
+                    int main()
+                    {
+                        printf("\n\n\t\tC Programs\n\n\n");
+                    
+                        /*
+                            always declare the variables before using them
+                        */
+                        int i = 10;     // declaration and initialization at the same time
+                    
+                        do // do contains the actual code and the updation
+                        {
+                            printf("i = %d\n",i);
+                            i = i-1;    // updation
+                        }
+                        // while loop doesn't contain any code but just the condition
+                        while(i &gt; 0);
+                    
+                        printf("\n\The value of i after exiting the loop is %d\n\n", i);
+                        printf("\n\n\t\t\tCoding is Fun !\n\n\n");
+                        return 0;
+                    }
+                    ```
+                    </pre></div>
+            <!-- content -->
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div class="detail">
+                
+            </div>
+            <div class="links">
+                <div class="quick_links">
+                    <ul>
+                        <a href="/">
+                            <li>Home</li>
+                        </a>
+                        <a href="/page/about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="/page/contect.html">
+                            <li>Contact</li>
+                        </a>
+                        <a href="/content/firstprgram.html" class="previous">&laquo; Previous</a>
+                        <a href="/content/firstprgram.html" class="next">Next &raquo;</a>
+                    </ul>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li class="social_link"><i class="fab fa-facebook-f"></i></li>
+                        <li class="social_link"><i class="fab fa-github"></i></li>
+                        <li class="social_link"><i class="fab fa-instagram"></i></li>
+                        <li class="social_link"><i class="fab fa-linkedin"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/5708ed03ed.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

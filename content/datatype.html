@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav_logo">
+                <img src="/assest/logo.png" alt="" class="nav_logo_img">
+            </div>
+            <div class="nav_container">
+                <ul>
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="/page/about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="/page/contect.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="main_content">
+            <!-- content -->
+            <h1>Data type in c </h1>
+            <p>In the C programming language, data types constitute the semantics and characteristics of storage of data
+                elements. They are expressed in the language syntax in form of declarations for memory locations or
+                variables. Data types also determine the types of operations or methods of processing of data elements.
+            </p>
+            <img src="/assest/Data-Types.jpeg" alt="data type in c language">
+            <table class="alt">
+                <tbody>
+                    <tr>
+                        <th>Types</th>
+                        <th>Data Types</th>
+                    </tr>
+                    <tr>
+                        <td>Basic Data Type</td>
+                        <td>int, char, float, double</td>
+                    </tr>
+                    <tr>
+                        <td>Derived Data Type</td>
+                        <td>array, pointer, structure, union</td>
+                    </tr>
+                    <tr>
+                        <td>Enumeration Data Type</td>
+                        <td>enum</td>
+                    </tr>
+                    <tr>
+                        <td>Void Data Type</td>
+                        <td>void</td>
+                    </tr>
+                </tbody>
+            </table><br>
+            <h3>BASIC DATA TYPES</h3>
+            <p>The basic data types are integer-based and floating-point based. C language supports both signed and
+                unsigned literals.</p><br>
+            <p>The memory size of the basic data types may change according to 32 or 64-bit operating system.
+
+                Let's see the basic data types. Its size is given according to 32-bit architecture.</p>
+            <table class="alt">
+                <tbody>
+                    <tr>
+                        <th>Data Types</th>
+                        <th>Memory Size</th>
+                        <th>Range</th>
+                    </tr>
+                    <tr>
+                        <td><b>char</b></td>
+                        <td>1 byte</td>
+                        <td>−128 to 127</td>
+                    </tr>
+                    <tr>
+                        <td>signed char</td>
+                        <td>1 byte</td>
+                        <td>−128 to 127</td>
+                    </tr>
+                    <tr>
+                        <td>unsigned char</td>
+                        <td>1 byte</td>
+                        <td>0 to 255</td>
+                    </tr>
+                    <tr>
+                        <td><b>short</b></td>
+                        <td>2 byte</td>
+                        <td>−32,768 to 32,767</td>
+                    </tr>
+                    <tr>
+                        <td>signed short</td>
+                        <td>2 byte</td>
+                        <td>−32,768 to 32,767</td>
+                    </tr>
+                    <tr>
+                        <td>unsigned short</td>
+                        <td>2 byte</td>
+                        <td>0 to 65,535</td>
+                    </tr>
+                    <tr>
+                        <td><b>int</b></td>
+                        <td>2 byte</td>
+                        <td>−32,768 to 32,767</td>
+                    </tr>
+                    <tr>
+                        <td>signed int</td>
+                        <td>2 byte</td>
+                        <td>−32,768 to 32,767</td>
+                    </tr>
+                    <tr>
+                        <td>unsigned int</td>
+                        <td>2 byte</td>
+                        <td>0 to 65,535</td>
+                    </tr>
+                    <tr>
+                        <td><b>short int</b></td>
+                        <td>2 byte</td>
+                        <td>−32,768 to 32,767</td>
+                    </tr>
+                    <tr>
+                        <td>signed short int</td>
+                        <td>2 byte</td>
+                        <td>−32,768 to 32,767</td>
+                    </tr>
+                    <tr>
+                        <td>unsigned short int</td>
+                        <td>2 byte</td>
+                        <td>0 to 65,535</td>
+                    </tr>
+                    <tr>
+                        <td><b>long int</b></td>
+                        <td>4 byte</td>
+                        <td>-2,147,483,648 to 2,147,483,647</td>
+                    </tr>
+                    <tr>
+                        <td>signed long int</td>
+                        <td>4 byte</td>
+                        <td>-2,147,483,648 to 2,147,483,647</td>
+                    </tr>
+                    <tr>
+                        <td>unsigned long int</td>
+                        <td>4 byte</td>
+                        <td>0 to 4,294,967,295</td>
+                    </tr>
+                    <tr>
+                        <td><b>float</b></td>
+                        <td>4 byte</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><b>double</b></td>
+                        <td>8 byte</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><b>long double</b></td>
+                        <td>10 byte</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table><br>
+            <h4>Keywords in C language </h4>
+            <p>
+                A keyword is a reserved word. You cannot use it as a variable name, constant name, etc. There are only
+                32 reserved words (keywords) in the C language.
+            </p><br>
+            <p>A list of 32 keywords in the c language is given below:</p>
+            <table class="alt">
+                <tbody>
+                    <tr>
+                        <td>auto</td>
+                        <td>break</td>
+                        <td>case</td>
+                        <td>char</td>
+                        <td>const</td>
+                        <td>continue</td>
+                        <td>default</td>
+                        <td>do</td>
+                    </tr>
+                    <tr>
+                        <td>double </td>
+                        <td>else </td>
+                        <td>enum </td>
+                        <td>extern</td>
+                        <td> float</td>
+                        <td>for</td>
+                        <td>goto</td>
+                        <td>if</td>
+                    </tr>
+                    <tr>
+                        <td>int </td>
+                        <td>long</td>
+                        <td>register</td>
+                        <td>return</td>
+                        <td>short</td>
+                        <td>signed</td>
+                        <td>sizeof</td>
+                        <td>static</td>
+                    </tr>
+                    <tr>
+                        <td>struct</td>
+                        <td>switch</td>
+                        <td>typedef</td>
+                        <td>union</td>
+                        <td>unsigned</td>
+                        <td>void</td>
+                        <td>volatile</td>
+                        <td>while</td>
+                    </tr>
+                </tbody>
+            </table><br>
+            <h2>Program to take input of various datatypes in C</h2><br>
+            <p>Below is a program to explain how to take input from user for different datatypes available in C
+                language. The different datatypes are int(integer values), float(decimal values) and char(character
+                values).
+
+                printf() is used to display text onto the screen
+
+                & is used to assign the input value to the variable and store it at that particular location.
+
+                scanf() is uded to take input from the user using format specifier discussed in upcoming tutorials
+
+                %d and %i, both are used to take numbers as input from the user.
+
+                %f is the format specifier to take float as input from the user
+
+                %s is the format specifier to take character as input from the user</p>
+            <div class="code"><p>#include< stdio.h></p>
+                <p>int main()</p>
+              <p>  {
+                <pre><code>
+                int num1, num2;
+                <span class="hljs-type">float</span> fraction;
+                char character;
+                
+                printf(<span class="hljs-string">"Enter two numbers number<span class="hljs-subst">\n</span>"</span>);
+                
+                <span class="hljs-comment">// Taking integer as input from user</span><br>
+                scanf(<span class="hljs-string">"%d%i"</span>, &amp;num1, &amp;num2);
+                printf(<span class="hljs-string">"<span class="hljs-subst">\n</span><span class="hljs-subst">\n</span>The two numbers You have entered are %d and %i<span class="hljs-subst">\n</span><span class="hljs-subst">\n</span>"</span>, num1, num2);
+                
+                <span class="hljs-comment">// Taking float or fraction as input from the user</span><br>
+                printf(<span class="hljs-string">"<span class="hljs-subst">\n</span><span class="hljs-subst">\n</span>Enter a Decimal number<span class="hljs-subst">\n</span>"</span>);
+                scanf(<span class="hljs-string">"%f"</span>, &amp;fraction);
+                printf(<span class="hljs-string">"<span class="hljs-subst">\n</span><span class="hljs-subst">\n</span>The float or fraction that you have entered is %f"</span>, fraction);
+                
+                <span class="hljs-comment">// Taking Character as input from the user</span><br>
+                printf(<span class="hljs-string">"<span class="hljs-subst">\n</span><span class="hljs-subst">\n</span>Enter a Character<span class="hljs-subst">\n</span>"</span>);
+                scanf(<span class="hljs-string">"%c"</span>,&amp;character);
+                printf(<span class="hljs-string">"<span class="hljs-subst">\n</span><span class="hljs-subst">\n</span>The character that you have entered is %c"</span>, character);                
+                return <span class="hljs-number">0</span>;</p>
+                </code></pre><p>}</p>
+                </div><br>
+                <h3>OUTPUT</h3>
+                <div class="code">Enter two numbers number<br>
+                    45<br>
+                    87<br>
+                    The two numbers You have entered are 45 and 87<br><br>
+                    
+                    
+                    
+                    Enter a Decimal number<br>
+                    45.2<br><br>
+                    
+                    
+                    The float or fraction that you have entered is 45.200001<br><br>
+                    
+                    Enter a Character <br>
+                    h <br><br>
+                    
+                    
+                    The character that you have entered is h <br>
+                </div>
+                <!-- content -->
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div class="detail">
+               
+            </div>
+            <div class="links">
+                <div class="quick_links">
+                    <ul>
+                        <a href="/">
+                            <li>Home</li>
+                        </a>
+                        <a href="/page/about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="/page/contect.html">
+                            <li>Contact</li>
+                        </a>
+                        <a href="/content/variable.html" class="previous">&laquo; Previous</a>
+                        <a href="/content/constant.html" class="next">Next &raquo;</a>
+                    </ul>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li class="social_link"><i class="fab fa-facebook-f"></i></li>
+                        <li class="social_link"><i class="fab fa-github"></i></li>
+                        <li class="social_link"><i class="fab fa-instagram"></i></li>
+                        <li class="social_link"><i class="fab fa-linkedin"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/5708ed03ed.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

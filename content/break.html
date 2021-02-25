@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav_logo">
+                <img src="/assest/logo.png" alt="" class="nav_logo_img">
+            </div>
+            <div class="nav_container">
+                <ul>
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="/page/about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="/page/contect.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="main_content">
+            <!-- content -->
+            <h1>
+                C break statement</h1>
+            <p>The break is a keyword in C which is used to bring the program control out of the loop. The break
+                statement is used inside loops or switch statement. The break statement breaks the loop one by one,
+                i.e., in the case of nested loops, it breaks the inner loop first and then proceeds to outer loops. The
+                break statement in C can be used in the following two scenarios:</p><br>
+            <li>With switch case</li>
+            <li> With loop<br></li>
+            <h2>Syntax:</h2>
+            <div class="code">
+                //loop or switch case <br>
+                break; </div>
+            <img src="/assest/break statement in c language.jpg" alt="break statements">4
+            <h2>Example of the break statement</h2>
+            <div class="code">
+                <p>#include< stdio.h>
+                </p>
+                <p>#include< stdlib.h><br>void main ()<br>{<br> int i;<br> for(i = 0; i&lt;10; i++)<br> {<br>
+                        printf(&quot;%d &quot;,i);<br> if(i == 5)<br> break;<br> }<br> printf(&quot;came outside of loop
+                        i = %d&quot;,i); </p>
+                <p>}</p>
+            </div>
+            <h2>OUTPUT</h2>
+            <div class="code">0 1 2 3 4 5 came outside of loop i = 5</div><br>
+            <h2>C break statement with the nested loop</h2>
+            <p>C break statement with the nested loop</p>
+            <div class="code">
+                <p>#include< stdio.h><br>int main()<br>{<br>int i=1,j=1;//initializing a local
+                        variable<br>for(i=1;i&lt;=3;i++)<br>{<br>for(j=1;j&lt;=3;j++)<br>{<br>printf(&quot;%d
+                        &amp;d\n&quot;,i,j);<br>if(i==2 &amp;&amp; j==2)<br>{<br>break;//will break loop of j
+                        only<br>}<br>}//end of for loop<br>return 0;<br>} </p>
+
+            </div>
+            <h2>OUTPUT </h2>
+            <div class="code">
+                <p>
+                    1 1<br>
+                    1 2<br>
+                    1 3<br>
+                    2 1<br>
+                    2 2<br>
+                    3 1<br>
+                    3 2<br>
+                    3 3<br>
+                </p>
+            </div><br>
+            <p>As you can see the output on the console, 2 3 is not printed because there is a break statement after
+                printing i==2 and j==2. But 3 1, 3 2 and 3 3 are printed because the break statement is used to break
+                the inner loop only.</p>
+            <!-- content -->
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div class="detail">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore ea et ad aliquid repellendus
+                    consectetur minima voluptatem praesentium autem eaque?</p>
+            </div>
+            <div class="links">
+                <div class="quick_links">
+                    <ul>
+                        <a href="/">
+                            <li>Home</li>
+                        </a>
+                        <a href="/page/about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="/page/contect.html">
+                            <li>Contact</li>
+                        </a>
+                        <a href="/content/firstprgram.html" class="previous">&laquo; Previous</a>
+                        <a href="/content/firstprgram.html" class="next">Next &raquo;</a>
+                    </ul>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li class="social_link"><i class="fab fa-facebook-f"></i></li>
+                        <li class="social_link"><i class="fab fa-github"></i></li>
+                        <li class="social_link"><i class="fab fa-instagram"></i></li>
+                        <li class="social_link"><i class="fab fa-linkedin"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/5708ed03ed.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

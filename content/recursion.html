@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav_logo">
+                <img src="/assest/logo.png" alt="" class="nav_logo_img">
+            </div>
+            <div class="nav_container">
+                <ul>
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="/page/about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="/page/contect.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="main_content">
+            <!-- content -->
+            <h1>Recursion in C</h1>
+            <p>Recursion is the process which comes into existence when a function calls a copy of itself to work on a
+                smaller problem. Any function which calls itself is called recursive function, and such function calls
+                are called recursive calls. Recursion involves several numbers of recursive calls. However, it is
+                important to impose a termination condition of recursion. Recursion code is shorter than iterative code
+                however it is difficult to understand.</p><br>
+                <img src="/assest/recursion in c.jpg" alt="recursion">
+            <p>Recursion cannot be applied to all the problem, but it is more useful for the tasks that can be defined
+                in terms of similar subtasks. For Example, recursion may be applied to sorting, searching, and traversal
+                problems.</p><br>
+            <p>Generally, iterative solutions are more efficient than recursion since function call is always overhead.
+                Any problem that can be solved recursively, can also be solved iteratively. However, some problems are
+                best suited to be solved by the recursion, for example, tower of Hanoi, Fibonacci series, factorial
+                finding, etc.</p><br>
+            <p>In the following example, recursion is used to calculate the factorial of a number.</p><br>
+            <div class="code">
+                <p>#include <stdio.h><br>int fact (int);<br>int main()<br>{<br> int n,f;<br> printf(&quot;Enter the
+                        number whose factorial you want to calculate?&quot;);<br> scanf(&quot;%d&quot;,&amp;n);<br> f =
+                        fact(n);<br> printf(&quot;factorial = %d&quot;,f);<br>}<br>int fact(int n)<br>{<br> if
+                        (n==0)<br> {<br> return 0;<br> }<br> else if ( n == 1)<br> {<br> return 1;<br> }<br> else<br>
+                        {<br> return n*fact(n-1);<br> }<br>} </p>
+            </div>
+            <h2>OUTPUT</h2>
+            <div class="code"><p>Enter the number whose factorial you want to calculate?<br>
+                5<br>
+                factorial = 120 </p></div>
+
+            <!-- content -->
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div class="detail">
+               
+            </div>
+            <div class="links">
+                <div class="quick_links">
+                    <ul>
+                        <a href="/">
+                            <li>Home</li>
+                        </a>
+                        <a href="/page/about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="/page/contect.html">
+                            <li>Contact</li>
+                        </a>
+                        <a href="/content/example3.html" class="previous">&laquo; Previous</a>
+                        <a href="/content/example5.html" class="next">Next &raquo;</a>
+                    </ul>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li class="social_link"><i class="fab fa-facebook-f"></i></li>
+                        <li class="social_link"><i class="fab fa-github"></i></li>
+                        <li class="social_link"><i class="fab fa-instagram"></i></li>
+                        <li class="social_link"><i class="fab fa-linkedin"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/5708ed03ed.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

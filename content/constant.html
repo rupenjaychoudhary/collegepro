@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav_logo">
+                <img src="/assest/logo.png" alt="" class="nav_logo_img">
+            </div>
+            <div class="nav_container">
+                <ul>
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="/page/about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="/page/contect.html">
+                        <li>Contact</li>
+                    </a>
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="main_content">
+            <!-- content -->
+            <img src="/assest/Types-of-Constants-in-C-and-C-1200x900.jpg" alt="">
+            <h1>CONSTANT IN C LANGUAGE </h1>
+            <P>Constants refer to fixed values that the program may not alter during its execution. These fixed values
+                are also called literals.<br><br>
+
+                Constants can be of any of the basic data types like an integer constant, a floating constant, a
+                character constant, or a string literal. There are enumeration constants as well.<br><br>
+
+                Constants are treated just like regular variables except that their values cannot be modified after
+                their definition.</P><br>
+
+            <h2>Integer Literals</h2>
+            <p>An integer literal can be a decimal, octal, or hexadecimal constant. A prefix specifies the base or
+                radix: 0x or 0X for hexadecimal, 0 for octal, and nothing for decimal.</p><br>
+            <p>An integer literal can also have a suffix that is a combination of U and L, for unsigned and long,
+                respectively. The suffix can be uppercase or lowercase and can be in any order</p><br>
+            <p>Here are some examples of integer literals −</p>
+            <div class="code">
+                <pre class="result notranslate">
+                    212         /* Legal */
+                    215u        /* Legal */
+                    0xFeeL      /* Legal */
+                    078         /* Illegal: 8 is not an octal digit */
+                    032UU       /* Illegal: cannot repeat a suffix */
+                    </pre>
+            </div>
+            <h3>Following are other examples of various types of integer literals −</h3>
+            <div class="code">
+                <pre class="result notranslate">
+                        85         /* decimal */
+                        0213       /* octal */
+                        0x4b       /* hexadecimal */
+                        30         /* int */
+                        30u        /* unsigned int */
+                        30l        /* long */
+                        30ul       /* unsigned long */
+                    
+                        </pre>
+            </div>
+            <h3>Floating-point Literals</h3>
+            <p>
+                A floating-point literal has an integer part, a decimal point, a fractional part, and an exponent part.
+                You can represent floating point literals either in decimal form or exponential form.
+            </p><br>
+            <p>
+                While representing decimal form, you must include the decimal point, the exponent, or both; and while
+                representing exponential form, you must include the integer part, the fractional part, or both. The
+                signed exponent is introduced by e or E.
+            </p><br>
+            <h3>Here are some examples of floating-point literals −</h3>
+            <div class="code">
+                <pre class="result notranslate">
+
+                            3.14159          /* Legal */
+                            314159E-5L       /* Legal */
+                            510E             /* Illegal: incomplete exponent */
+                            210f             /* Illegal: no decimal or exponent */
+                            .e55             /* Illegal: missing integer or fraction */
+                            
+                            </pre>
+            </div>
+            <h3>Character Constants</h3>
+            <p>
+                Character literals are enclosed in single quotes, e.g., 'x' can be stored in a simple variable of char type.</p><br>
+
+              <p>  A character literal can be a plain character (e.g., 'x'), an escape sequence (e.g., '\t'), or a universal character (e.g., '\u02C0').</p><br>
+                
+               <p> There are certain characters in C that represent special meaning when preceded by a backslash for example, newline (\n) or tab (\t).
+            </p><br>
+            <div class="code"><ul>
+                <li class="dropdown">
+                <input type="checkbox">
+                <a href="#" data-toggle="dropdown">Here, you have a list of such escape sequence codes −</a>
+                <ul class="dropdown-menu">
+                <table style="text-align:center;" class="table table-bordered">
+                <tbody><tr>
+                <th style="width:35%;text-align:center;">Escape sequence</th>
+                <th style="text-align:center;">Meaning</th>
+                </tr>
+                <tr>
+                <td>\\</td>
+                <td>\ character</td>
+                </tr>
+                <tr>
+                <td>\'</td>
+                <td> ' character</td>
+                </tr>
+                <tr>
+                <td>\"</td>
+                <td>" character</td>
+                </tr>
+                <tr>
+                <td>\?</td>
+                <td>? character</td>
+                </tr>
+                <tr>
+                <td>\a</td>
+                <td>Alert or bell</td>
+                </tr>
+                <tr>
+                <td>\b</td>
+                <td>Backspace</td>
+                </tr>
+                <tr>
+                <td>\f</td>
+                <td>Form feed</td>
+                </tr>
+                <tr>
+                <td>\n</td>
+                <td>Newline</td>
+                </tr>
+                <tr>
+                <td>\r</td>
+                <td>Carriage return</td>
+                </tr>
+                <tr>
+                <td>\t</td>
+                <td>Horizontal tab</td>
+                </tr>
+                <tr>
+                <td>\v</td>
+                <td>Vertical tab</td>
+                </tr>
+                <tr>
+                <td>\ooo</td>
+                <td>Octal number of one to three digits</td>
+                </tr>
+                <tr>
+                <td>\xhh . . .</td>
+                <td>Hexadecimal number of one or more digits</td>
+                </tr>
+                </tbody></table>
+                </ul>
+                </li>
+                </ul></div><br>
+                <h3>Following is the example to show a few escape sequence characters −</h3>
+                
+                <div class="code"><pre class="prettyprint notranslate prettyprinted" style=""><span class="com">#include</span><span class="pln"> </span><span class="str">&lt;stdio.h&gt;</span><span class="pln">
+
+                </span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+                   printf</span><span class="pun">(</span><span class="str">"Hello\tWorld\n\n"</span><span class="pun">);</span><span class="pln">
+                
+                   </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+                </span><span class="pun">}</span></pre></div><br>
+                <h2>When the above code is compiled and executed, it produces the following result −</h2>
+                <div class="code">Hello world</div>
+            <!-- content -->
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div class="detail">
+                            </div>
+            <div class="links">
+                <div class="quick_links">
+                    <ul>
+                        <a href="/">
+                            <li>Home</li>
+                        </a>
+                        <a href="/page/about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="/page/contect.html">
+                            <li>Contact</li>
+                        </a>
+                        <a href="/content/datatype.html" class="previous">&laquo; Previous</a>
+                    <a href="/content/ASCII value in C.html" class="next">Next &raquo;</a>
+                    </ul>
+                </div>
+                
+                <div class="social">
+                    <ul>
+                        <li class="social_link"><i class="fab fa-facebook-f"></i></li>
+                        <li class="social_link"><i class="fab fa-github"></i></li>
+                        <li class="social_link"><i class="fab fa-instagram"></i></li>
+                        <li class="social_link"><i class="fab fa-linkedin"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/5708ed03ed.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

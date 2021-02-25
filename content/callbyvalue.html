@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav_logo">
+                <img src="/assest/logo.png" alt="" class="nav_logo_img">
+            </div>
+            <div class="nav_container">
+                <ul>
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="/page/about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="/page/contect.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="main_content">
+            <!-- content -->
+            <h2>Call by value and Call by reference in C</h2>
+            <p>There are two methods to pass the data into the function in C language, i.e., call by value and call by
+                reference.</p>
+            <img src="/assest/callbyvalue-callbyreference-in-c.png" alt="call by value&call by refrence">
+            <h2>Call by value in C</h2>
+            <li>In call by value method, the value of the actual parameters is copied into the formal parameters. In
+                other words, we can say that the value of the variable is used in the function call in the call by value
+                method.</li>
+            <li>In call by value method, we can not modify the value of the actual parameter by the formal parameter.
+            </li>
+            <li>In call by value, different memory is allocated for actual and formal parameters since the value of the
+                actual parameter is copied into the formal parameter.</li>
+            <li>The actual parameter is the argument which is used in the function call whereas formal parameter is the
+                argument which is used in the function definition.</li>
+            <div class="code">
+                <p>#include< stdio.h><br>void change(int num)<br> {<br> printf(&quot;Before adding value inside function
+                        num=%d \n&quot;,num);<br> num=num+100;<br> printf(&quot;After adding value inside function
+                        num=%d \n&quot;, num);<br>}<br>int main() {<br> int x=100;<br> printf(&quot;Before function call
+                        x=%d \n&quot;, x);<br> change(x);//passing value in function<br> printf(&quot;After function
+                        call x=%d \n&quot;, x);<br>return 0;<br>} </p>
+            </div>
+            <h2>OUTPUT</h2>
+            <div class="code">
+                <p>Before function call x=100<br>
+                    Before adding value inside function num=100<br>
+                    After adding value inside function num=200<br>
+                    After function call x=100 <br> </p>
+            </div>
+            <h2>Call by reference in C</h2>
+            <li>In call by reference, the address of the variable is passed into the function call as the actual
+                parameter.
+            <li> The value of the actual parameters can be modified by changing the formal parameters since the address
+                of the actual parameters is passed.</li>
+            <li> In call by reference, the memory allocation is similar for both formal parameters and actual
+                parameters.</li>
+            <li> All the operations in the function are performed on the value stored at the address of the actual
+                parameters, and the modified value gets stored at the same address.</li>
+            <h2>example of call by refrence</h2>
+            <div class="code">
+                <p>#include< stdio.h><br>void change(int <em>num)<br> {<br> printf(&quot;Before adding value inside function
+                            num=%d \n&quot;,</em>num);<br> (<em>num) += 100;<br> printf(&quot;After adding value inside
+                            function num=%d \n&quot;, </em>num);<br>}<br>int main() {<br> int x=100;<br>
+                        printf(&quot;Before function call x=%d \n&quot;, x);<br> change(&amp;x);//passing reference in
+                        function<br> printf(&quot;After function call x=%d \n&quot;, x);<br>return 0;<br>} </p>
+            </div>
+            <h2>OUTPUT</h2>
+            <div class="code"><p>Before function call x=100<br>
+                Before adding value inside function num=100<br>
+                After adding value inside function num=200<br>
+                After function call x=200</p></div>
+            <!-- content -->
+            <div class="priinext">
+                <a href="/content/functioninc.html" class="previous">
+                    <div class="button">Previous</div>
+                </a>
+                <a href="/content/recursion.html" class="next">
+                    <div class="button">Next</div></a>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div class="detail">
+
+            </div>
+            <div class="links">
+                <div class="quick_links">
+                    <ul>
+                        <a href="/">
+                            <li>Home</li>
+                        </a>
+                        <a href="/page/about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="/page/contect.html">
+                            <li>Contact</li>
+                        </a>
+                       
+                    </ul>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li class="social_link"><i class="fab fa-facebook-f"></i></li>
+                        <li class="social_link"><i class="fab fa-github"></i></li>
+                        <li class="social_link"><i class="fab fa-instagram"></i></li>
+                        <li class="social_link"><i class="fab fa-linkedin"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/5708ed03ed.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
