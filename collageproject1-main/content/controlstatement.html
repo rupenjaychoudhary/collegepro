@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav_logo">
+                <img src="/assest/logo.png" alt="" class="nav_logo_img">
+            </div>
+            <div class="nav_container">
+                <ul>
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="/page/about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="/page/contect.html">
+                        <li>Contact</li>
+                    </a>
+                   
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="main_content">
+            <!-- content -->
+            <h1>CONTROL STATEMENT IN C LANGUAGE </h1>
+            <h2>C if else statement</h2>
+            <p>
+                The if statement is used to check some given condition and perform some operations depending upon the
+                correctness of that condition. It is mostly used in the scenario where we need to perform the different
+                operations for the different conditions. The syntax of the if statement is given below.
+            </p><br>
+            <div class="code">
+                <pre class="c language-clike"><code class=" language-clike"><span class="token keyword">if</span><span class="token punctuation">(</span>expression<span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    statement inside<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                    statement outside<span class="token punctuation">;</span></code></pre>
+            </div><br>
+            <img src="/assest/flow chart.png" alt="if flow chart">
+            <h2>Let's see a simple example of C language if statement.</h2>
+            <div class="code">
+                <pre class="exec" style="max-height: 600px;"><code class="c hljs cpp"><span class="hljs-comment">// Program to display a number if it is negative</span>
+
+                    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+                    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>{
+                        <span class="hljs-keyword">int</span> number;
+                    
+                        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Enter an integer: "</span>);
+                        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;number);
+                    
+                        <span class="hljs-comment">// true if number is less than 0</span>
+                        <span class="hljs-keyword">if</span> (number &lt; <span class="hljs-number">0</span>) {
+                            <span class="hljs-built_in">printf</span>(<span class="hljs-string">"You entered %d.\n"</span>, number);
+                        }
+                    
+                        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"The if statement is easy."</span>);
+                     
+                        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+                    }</code></pre>
+            </div>
+            <h2>OUTPUT</h2>
+            <div class="code">
+                <pre><samp>
+                        Enter an integer: 5
+                        The if statement is easy.</samp></pre>
+            </div><br>
+            <h2>C if...else Statement</h2>
+            <p>The if-else statement is used to perform two operations for a single condition. The if-else statement is
+                an extension to the if statement using which, we can perform two different operations, i.e., one is for
+                the correctness of that condition, and the other is for the incorrectness of the condition. Here, we
+                must notice that if and else block cannot be executed simiulteneously. Using if-else statement is always
+                preferable since it always invokes an otherwise case with every if condition.
+            </p><br>
+            <div class="code">
+                <pre style="max-height: 600px;"><code class="c hljs cpp"><span class="hljs-keyword">if</span>   (test expression)
+                        {
+                            <span class="hljs-comment">// statements to be executed if the test expression is true</span>
+                        }
+                        <span class="hljs-keyword">else</span>
+                         {
+                            <span class="hljs-comment">// statements to be executed if the test expression is false</span>
+                        }</code></pre>
+            </div>
+            <div class="code">
+                <pre class="exec" style="max-height: 600px;"><code class="c hljs cpp"><span class="hljs-comment">// Check whether an integer is odd or even</span>
+
+                            <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+                            <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>
+                            {
+                                <span class="hljs-keyword">int</span> number;
+                                <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Enter an integer: "</span>);
+                                <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;number);
+                            
+                                <span class="hljs-comment">// True if the remainder is 0</span>
+                                <span class="hljs-keyword">if</span>  (number%<span class="hljs-number">2</span> == <span class="hljs-number">0</span>) {
+                                    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d is an even integer."</span>,number);
+                                }
+                                <span class="hljs-keyword">else</span> {
+                                    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d is an odd integer."</span>,number);
+                                }
+                            
+                                <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+                            }</code></pre>
+            </div>
+            <h2>OUTPUT</h2>
+            <div class="code">
+                <pre><samp>
+                                Enter an integer: 7
+                                7 is an odd integer.</samp></pre>
+            </div><br>
+            <img src="/assest/if_else_statement.jpg" alt="if-else flow chart"><br>
+            <h2>
+                If else if ladder statement
+            </h2>
+            <p>
+                The if-else-if ladder statement is an extension to the if-else statement. It is used in the scenario
+                where there are multiple cases to be performed for different conditions. In if-else-if ladder statement,
+                if a condition is true then the statements defined in the if block will be executed, otherwise if some
+                other condition is true then the statements defined in the else-if block will be executed, at the last
+                if none of the condition is true then the statements defined in the else block will be executed. There
+                are multiple else-if blocks possible. It is similar to the switch case statement where the default is
+                executed instead of else block if none of the cases is matched.
+            </p><br>
+            <div class="code">
+                <p>if(condition1)<br>
+                    {<br>//code to be executed if condition1 is true<br>}<br>else if(condition2)<br>{<br>//code to be
+                    executed if condition2 is true<br>}<br>else if(condition3)<br>{<br>//code to be executed if
+                    condition3 is true<br>}<br>...<br>else<br>{<br>//code to be executed if all the conditions are
+                    false<br>} </p>
+            </div><br>
+            <h2>FLOW CHART OF IF-ELSE-IF LADDER STATEMENT</h2>
+            <img src="/assest/if-else-if-statement.png" alt="flow chart of if-else-if ladder statement">
+            
+            <!-- content -->
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div class="detail">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore ea et ad aliquid repellendus
+                    consectetur minima voluptatem praesentium autem eaque?</p>
+            </div>
+            <div class="links">
+                <div class="quick_links">
+                    <ul>
+                        <a href="/">
+                            <li>Home</li>
+                        </a>
+                        <a href="/page/about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="/page/contect.html">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li class="social_link"><i class="fab fa-facebook-f"></i></li>
+                        <li class="social_link"><i class="fab fa-github"></i></li>
+                        <li class="social_link"><i class="fab fa-instagram"></i></li>
+                        <li class="social_link"><i class="fab fa-linkedin"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/5708ed03ed.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

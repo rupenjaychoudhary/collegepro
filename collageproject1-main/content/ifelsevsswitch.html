@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav_logo">
+                <img src="/assest/logo.png" alt="" class="nav_logo_img">
+            </div>
+            <div class="nav_container">
+                <ul>
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="/page/about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="/page/contect.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="main_content">
+            <!-- content -->
+            <h1>IF-ELSE VS SWITCH STATEMENT</h1>
+            <H2>What is an if-else statement?</H2>
+            <p>An if-else statement in C programming is a conditional statement that executes a different set of
+                statements based on the condition that is true or false. The 'if' block will be executed only when the
+                specified condition is true, and if the specified condition is false, then the else block will be
+                executed.</p>
+            <h2>Syntax of if-else statement is given below:</h2>
+            <div class="code">
+                <p>if(expression)<br>{<br> // statements;<br>}<br>else<br>{<br> // statements;<br>} </p>
+            </div><br>
+            <h2>What is a switch statement?</h2>
+            <p>A switch statement is a conditional statement used in C programming to check the value of a variable and
+                compare it with all the cases. If the value is matched with any case, then its corresponding statements
+                will be executed. Each case has some name or number known as the identifier. The value entered by the
+                user will be compared with all the cases until the case is found. If the value entered by the user is
+                not matched with any case, then the default statement will be executed.</p>
+            <br>
+            <h3>Syntax of the switch statement is given below:</h3>
+            <div class="code">
+                <p>switch(expression)<br>{<br> case constant 1:<br> // statements;<br> break;<br> case constant 2:<br>
+                    // statements;<br> break;<br> case constant n:<br> // statements;<br> break;<br> default:<br>//
+                    statements;<br>} </p>
+            </div><br>
+            <h2>Similarity b/w if-else and switch</h2>
+            <p>Both the if-else and switch are the decision-making statements. Here, decision-making statements mean
+                that the output of the expression will decide which statements are to be executed.</p><br>
+            <h2>Differences b/w if-else and switch statement</h2>
+            <p>The following are the differences between if-else and switch statement are:</p>
+            <img src="/assest/if-else-vs-switch.png" alt="if-else vs switch">
+            <div class="code"><table class="alt">
+                <tbody><tr>
+                    <th></th>
+                    <th>If-else</th>
+                    <th>switch</th>
+                </tr>
+                <tr>
+                    <td><strong>Definition</strong></td>
+                    <td>Depending on the condition in the 'if' statement, 'if' and 'else' blocks are executed.</td>
+                    <td>The user will decide which statement is to be executed.</td>
+                </tr>
+                <tr>
+                    <td><strong>Expression</strong></td>
+                    <td>It contains either logical or equality expression.</td>
+                    <td>It contains a single expression which can be either a character or integer variable.</td>
+                </tr>
+                <tr>
+                    <td><strong>Evaluation</strong></td>
+                    <td>It evaluates all types of data, such as integer, floating-point, character or Boolean.</td>
+                    <td>It evaluates either an integer, or character.</td>
+                </tr>
+                <tr>
+                    <td><strong>Sequence of execution</strong></td>
+                    <td>First, the condition is checked. If the condition is true then 'if' block is executed otherwise 'else' block</td>
+                    <td>It executes one case after another till the break keyword is not found, or the default statement is executed.</td>
+                </tr>
+                <tr>
+                    <td><strong>Default execution</strong></td>
+                    <td>If the condition is not true, then by default, else block will be executed.</td>
+                    <td>If the value does not match with any case, then by default, default statement is executed.</td>
+                </tr>
+                <tr>
+                    <td><strong>Editing</strong></td>
+                    <td>Editing is not easy in the 'if-else' statement.</td>
+                    <td>Cases in a switch statement are easy to maintain and modify. Therefore, we can say that the removal or editing of any case will not interrupt the execution of other cases.</td>
+                </tr>
+                <tr>
+                    <td><strong>Speed</strong></td>
+                    <td>If there are multiple choices implemented through 'if-else', then the speed of the execution will be slow.</td>
+                    <td>If we have multiple choices then the switch statement is the best option as the speed of the execution will be much higher than 'if-else'.</td>
+                </tr>
+                </tbody></table></div>
+
+            <!-- content -->
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div class="detail">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore ea et ad aliquid repellendus
+                    consectetur minima voluptatem praesentium autem eaque?</p>
+            </div>
+            <div class="links">
+                <div class="quick_links">
+                    <ul>
+                        <a href="/">
+                            <li>Home</li>
+                        </a>
+                        <a href="/page/about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="/page/contect.html">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li class="social_link"><i class="fab fa-facebook-f"></i></li>
+                        <li class="social_link"><i class="fab fa-github"></i></li>
+                        <li class="social_link"><i class="fab fa-instagram"></i></li>
+                        <li class="social_link"><i class="fab fa-linkedin"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/5708ed03ed.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

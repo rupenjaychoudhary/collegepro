@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav_logo">
+                <img src="/assest/logo.png" alt="" class="nav_logo_img">
+            </div>
+            <div class="nav_container">
+                <ul>
+                        <a href="/">
+                            <li>Home</li>
+                        </a>
+                        <a href="/page/about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="/page/contect.html">
+                            <li>Contact</li>
+                        </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="main_content">
+            <!-- content -->
+            <h1>
+                Printf() and Scanf()
+            </h1>
+            <p>
+                The printf() and scanf() functions are used for input and output in C language. Both functions are inbuilt library functions, defined in stdio.h (header file).
+            </p><br>
+
+            <h2>
+                printf() function
+            </h2>
+            <p>
+                The printf() function is used for output. It prints the given statement to the console.
+
+The syntax of printf() function is given below:
+            </p><br>
+            <div class="code">
+                printf("format string",argument_list);  
+            </div><br>
+            <p>
+                The format string can be %d (integer), %c (character), %s (string), %f (float) etc.
+            </p><br>
+            <h3>
+                scanf() function
+            </h3>
+            <p>
+                The scanf() function is used for input. It reads the input data from the console.
+            </p><br>
+            <div class="code">scanf("format string",argument_list);  </div><br>
+            
+            <h4>program to print cube of a given number</h4>
+            <p>Let's see a simple example of c language that gets input from the user and prints the cube of the given number.</p><br>
+                   <div class="code"><p>#include< stdio.h><br>int main(){<br>int number;<br>printf(&quot;enter a number:&quot;);<br>scanf(&quot;%d&quot;,&amp;number);<br>printf(&quot;cube of number is:%d &quot;,number*number*number);<br>return 0;<br>}    </p>
+                   </div><br>
+                   <h5>OUTPUT</h5>
+                   <div class="code"><p>enter a number:5<br>
+                    cube of number is:125</p>
+                    </div>
+            <!-- content -->
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div class="detail">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore ea et ad aliquid repellendus
+                    consectetur minima voluptatem praesentium autem eaque?</p>
+            </div>
+            <div class="links">
+                <div class="quick_links">
+                    <ul>
+                        <a href="/">
+                            <li>Home</li>
+                        </a>
+                        <a href="/page/about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="/page/contect.html">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li class="social_link"><i class="fab fa-facebook-f"></i></li>
+                        <li class="social_link"><i class="fab fa-github"></i></li>
+                        <li class="social_link"><i class="fab fa-instagram"></i></li>
+                        <li class="social_link"><i class="fab fa-linkedin"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/5708ed03ed.js" crossorigin="anonymous"></script>
+</body>
+</html>

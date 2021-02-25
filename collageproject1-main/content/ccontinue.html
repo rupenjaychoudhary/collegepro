@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav_logo">
+                <img src="/assest/logo.png" alt="" class="nav_logo_img">
+            </div>
+            <div class="nav_container">
+                <ul>
+                    <a href="/">
+                        <li>Home</li>
+                    </a>
+                    <a href="/page/about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="/page/contect.html">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="main_content">
+            <!-- content -->
+            <h1>C continue statement</h1><br>
+            <p>The continue statement in C language is used to bring the program control to the beginning of the loop.
+                The continue statement skips some lines of code inside the loop and continues with the next iteration.
+                It is mainly used for a condition so that we can skip some code for a particular condition.</p>
+            <h2>Syntax:</h2>
+            <div class="code">
+                <p>//loop statements<br>continue;<br>//some lines of the code which is to be skipped </p>
+            </div>
+            <h2>Continue statement example 1</h2>
+            <div class="code">
+                <p>#include< stdio.h><br>void main ()<br>{<br> int i = 0;<br> while(i!=10)<br> {<br>
+                        printf(&quot;%d&quot;, i);<br> continue;<br> i++;<br> }<br>} </p>
+            </div>
+            <h2>OUTPUT</h2>
+            <div class="code">infinte loop</div>
+            <h2>C continue statement with inner loop</h2>
+            <div class="code">
+                <p>#include<stdio.h><br>int main()<br>{<br>int i=1,j=1;//initializing a local
+                        variable<br>for(i=1;i&lt;=3;i++)<br>{<br>for(j=1;j&lt;=3;j++)<br>{<br>if(i==2 &amp;&amp;
+                        j==2)<br>{<br>continue;//will continue loop of j only<br>}<br>printf(&quot;%d
+                        %d\n&quot;,i,j);<br>}<br>}//end of for loop<br>return 0;<br>}</p>
+            </div>
+            <h2>OUTPUT</h2>
+            <div class="code">
+                <p>
+                    1 1<br>
+                    1 2<br>
+                    1 3<br>
+                    2 1<br>
+                    2 3<br>
+                    3 1<br>
+                    3 2<br>
+                    3 3<br>
+                </p>
+            </div>
+            <h1>C goto statement</h1>
+            <p>The goto statement is known as jump statement in C. As the name suggests, goto is used to transfer the
+                program control to a predefined label. The goto statment can be used to repeat some part of the code for
+                a particular condition. It can also be used to break the multiple loops which can't be done by using a
+                single break statement. However, using goto is avoided these days since it makes the program less
+                readable and complecated.</p>
+            <h2>syntax</h2>
+            <div class="code">
+                <p>
+                    label:</p>
+                <p> //some part of the code;</p>
+                <p>goto label;</p>
+                </p>
+            </div>
+            <h2>goto example</h2>
+            <p>Let's see a simple example to use goto statement in C language.</p>
+            <div class="code">
+                <p>#include <stdio.h><br>int main()<br>{<br> int num,i=1;<br> printf(&quot;Enter the number whose table
+                        you want to print?&quot;);<br> scanf(&quot;%d&quot;,&amp;num);<br> table:<br> printf(&quot;%d x
+                        %d = %d\n&quot;,num,i,num*i);<br> i++;<br> if(i&lt;=10)<br> goto table;<br>}</p>
+            </div>
+            <h2>OUTPUT</h2>
+            <div class="code">
+                <p>
+                    Enter the number whose table you want to print? <br>
+                    10<br>
+                    10 x 1 = 10<br>
+                    10 x 2 = 20<br>
+                    10 x 3 = 30<br>
+                    10 x 4 = 40<br>
+                    10 x 5 = 50<br>
+                    10 x 6 = 60<br>
+                    10 x 7 = 70<br>
+                    10 x 8 = 80<br>
+                    10 x 9 = 90<br>
+                    10 x 10 = 100<br>
+                </p>
+            </div>
+            <h2>When should we use goto?</h2>
+            <p>The only condition in which using goto is preferable is when we need to break the multiple loops using a
+                single statement at the same time. Consider the following example.</p>
+            <div class="code">
+                <p>#include <stdio.h><br>int main()<br>{<br> int i, j, k;<br> for(i=0;i&lt;10;i++)<br> {<br>
+                        &nbsp; &nbsp; for(j=0;j&lt;5;j++)<br>&nbsp; {<br> &nbsp; &nbsp; &nbsp; for(k=0;k&lt;3;k++)<br>
+                        &nbsp; &nbsp; {<br>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d %d
+                        %d\n&quot;,i,j,k);<br> &nbsp; &nbsp; &nbsp; &nbsp;if(j == 3)<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br> goto out;<br> &nbsp; &nbsp; &nbsp; }<br>&nbsp; &nbsp;
+                        }<br> &nbsp; }<br> }<br> out:<br>
+                        printf(&quot;came out of the loop&quot;);<br>} </p>
+            </div>
+            <h2>OUTPUT</h2>
+            <div class="code">
+                0 0 0<br>
+                0 0 1<br>
+                0 0 2<br>
+                0 1  0<br>
+                0 1 1<br>
+                0 1 2<br>
+                0 2 0<br>
+                0 2 1<br>
+                0 2 2<br>
+                0 3 0<br>
+                came out of the loop</div>
+
+
+            <!-- content -->
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div class="detail">
+                <h3>Lorem ipsum dolor sit amet.</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore ea et ad aliquid repellendus
+                    consectetur minima voluptatem praesentium autem eaque?</p>
+            </div>
+            <div class="links">
+                <div class="quick_links">
+                    <ul>
+                        <a href="/">
+                            <li>Home</li>
+                        </a>
+                        <a href="/page/about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="/page/contect.html">
+                            <li>Contact</li>
+                        </a>
+                        <a href="/content/firstprgram.html" class="previous">&laquo; Previous</a>
+                        <a href="/content/firstprgram.html" class="next">Next &raquo;</a>
+                    </ul>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li class="social_link"><i class="fab fa-facebook-f"></i></li>
+                        <li class="social_link"><i class="fab fa-github"></i></li>
+                        <li class="social_link"><i class="fab fa-instagram"></i></li>
+                        <li class="social_link"><i class="fab fa-linkedin"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/5708ed03ed.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
